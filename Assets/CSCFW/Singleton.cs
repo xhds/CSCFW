@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using System;
 
 namespace CSCFW
 {
@@ -9,13 +6,13 @@ namespace CSCFW
 	{
 		private static T _instance = null;
 
-		static Singleton(){}
+		private Singleton(){}
 
 		public static void Create()
 		{
 			if (null == _instance)
 			{
-				_instance = Activator.CreateInstance<T>();
+				_instance = (T)Activator.CreateInstance(typeof(T), true);
 			}
 		}
 
