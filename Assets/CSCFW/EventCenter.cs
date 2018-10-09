@@ -4,6 +4,7 @@ namespace CSCFW
 {
 	public class EventCenter
 	{
+		#region fields & properties
 		public enum Order
 		{
 			ONE = 1,
@@ -13,6 +14,7 @@ namespace CSCFW
 
 		public delegate void EventHandler(object arg = null);
 		private Dictionary<Order, Dictionary<EventID, EventHandler>> _eventDict = new Dictionary<Order, Dictionary<EventID, EventHandler>>();
+		#endregion
 
 		private EventCenter()
 		{
@@ -22,6 +24,7 @@ namespace CSCFW
 			}
 		}
 
+		#region public
 		public void Register(EventID eventID, EventHandler handler, Order order)
 		{
 			var orderDict = _eventDict[order];
@@ -77,6 +80,7 @@ namespace CSCFW
 			}
 			return null;
 		}
+		#endregion
 	}
 }
 

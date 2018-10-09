@@ -4,6 +4,7 @@ namespace CSCFW
 {
 	public static class JsonAPI
 	{
+		#region public
 		public static T LoadFromFile<T>(string path) 
 		{
 			try
@@ -13,7 +14,7 @@ namespace CSCFW
 				var jsonString = jsonAsset.text;
 				Resources.UnloadAsset(jsonAsset);
 
-				return JsonAPIPluginFullSerializer.FromJsonString<T>(jsonString);
+				return LoadFromString<T>(jsonString);
 			}
 			catch
 			{
@@ -27,5 +28,13 @@ namespace CSCFW
 		{
 
 		}
+		#endregion
+
+		#region private
+		private static T LoadFromString<T>(string jsonString)
+		{
+			return JsonAPIPluginFullSerializer.FromJsonString<T>(jsonString);
+		}
+		#endregion
 	}
 }
