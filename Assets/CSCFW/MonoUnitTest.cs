@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CSCFW
 {
@@ -11,6 +9,7 @@ namespace CSCFW
 			Test_EventCenter_Register();
 			Test_EventCenter_Unregister();
 			Test_EventCenter_FireEvent();
+			Test_JsonAPI_LoadFromFile();
 		}
 
 		private bool _TestMethod_Called = false;
@@ -91,6 +90,27 @@ namespace CSCFW
 
 			Singleton<EventCenter>.Destroy();
 			Debug.Log("Test_EventCenter_FireEvent FINISH");
+		}
+
+		private void Test_JsonAPI_LoadFromFile()
+		{
+			var classA = JsonAPI.LoadFromFile<ClassA>("JsonAPITest");
+			Debug.Assert(classA != null);
+			Debug.Assert(classA.a == -3);
+			Debug.Assert(classA.b == -0.4f);
+			Debug.Assert(classA.c);
+			Debug.Assert(classA.d == "fuck");
+			Debug.Assert(classA.e != null);
+			for (int i = 0; i < classA.e.Count; ++i)
+			{
+				Debug.Assert(classA.e[i] == i + 1);
+			}
+			Debug.Assert(classA.f != null);
+			foreach (var kv in classA.f)
+			{
+				Debug.Assert(kv.Key  == kv.Value);
+			}
+			Debug.Log("Test_JsonAPI_LoadFromFile FINISH");
 		}
 	}
 }
