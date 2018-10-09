@@ -100,16 +100,28 @@ namespace CSCFW
 			Debug.Assert(classA.b == -0.4f);
 			Debug.Assert(classA.c);
 			Debug.Assert(classA.d == "fuck");
+
 			Debug.Assert(classA.e != null);
 			for (int i = 0; i < classA.e.Count; ++i)
 			{
 				Debug.Assert(classA.e[i] == i + 1);
 			}
+
 			Debug.Assert(classA.f != null);
 			foreach (var kv in classA.f)
 			{
 				Debug.Assert(kv.Key  == kv.Value);
 			}
+
+			Debug.Assert(classA.g != null);
+			Debug.Assert(classA.g.a == 10);
+			Debug.Assert(classA.g.b == 3.3f);
+
+			Debug.Assert(classA.h != null);
+			Debug.Assert(classA.h.x == 2.0f);
+			Debug.Assert(classA.h.y == 3.0f);
+			Debug.Assert(classA.h.z == 4.0f);
+
 			Debug.Log("Test_JsonAPI_LoadFromFile FINISH");
 		}
 	}

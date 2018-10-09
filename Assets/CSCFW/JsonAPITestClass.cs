@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace CSCFW
 {
@@ -11,5 +12,13 @@ namespace CSCFW
 		public string d = "";
 		public List<int> e = new List<int>();
 		public Dictionary<string, string> f = new Dictionary<string, string>();
+		public ClassB g;
+		public Vector3 h;
+	}
+
+	public class ClassB
+	{
+		public int a;
+		public float b;
 	}
 }
