@@ -15,7 +15,7 @@ namespace CSCFW
 		public ClassB g;
 		public Vector3 h;
 	}
-
+	
 	public class ClassB
 	{
 		public int a;

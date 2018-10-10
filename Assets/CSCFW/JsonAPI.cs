@@ -24,7 +24,7 @@ namespace CSCFW
 			}
 		}
 
-		public static void ToJsonFile<T>(T obj, string path)
+		public static void ObjectToFile<T>(T obj, string path)
 		{
 
 		}
