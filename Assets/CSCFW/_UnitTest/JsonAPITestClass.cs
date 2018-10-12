@@ -21,4 +21,12 @@ namespace CSCFW
 		public int a;
 		public float b;
 	}
+
+	[CreateAssetMenu(menuName = "CSCFW/CreateTestC")]
+	public class ClassC
+	{
+		public float x = 1f;
+		public float y = 2f;
+		public float z = 3f;
+	}
 }

@@ -6,10 +6,12 @@ namespace CSCFW
 	{
 		void Start()
 		{
-			Test_EventCenter_Register();
+			/*Test_EventCenter_Register();
 			Test_EventCenter_Unregister();
 			Test_EventCenter_FireEvent();
-			Test_JsonAPI_LoadFromFile();
+			Test_JsonAPI_LoadFromFile();*/
+			Test_Profiler_JsonAPI();
+			Test_Profiler_LoadAsset();
 		}
 
 		private bool _TestMethod_Called = false;
@@ -121,8 +123,37 @@ namespace CSCFW
 			Debug.Assert(classA.h.x == 2.0f);
 			Debug.Assert(classA.h.y == 3.0f);
 			Debug.Assert(classA.h.z == 4.0f);
-
+			//Debug.Log(sizeof(classA));
 			Debug.Log("Test_JsonAPI_LoadFromFile FINISH");
+		}
+
+		private const int TEST_LEN = 10000 * 100;
+		private void Test_Profiler_JsonAPI()
+		{
+			Debug.Log("Test_Profiler_JsonAPI Begin");
+			var now1 = System.DateTime.Now;
+			for (int i = 0; i < TEST_LEN; ++i)
+			{
+				var c = JsonAPI.LoadFromFile<ClassC>("ClassC");
+			}
+			var now2 = System.DateTime.Now;
+			var diff = now2 - now1;
+			Debug.Log("Cost ms: " + diff.TotalMilliseconds);
+			Debug.Log("Test_Profiler_JsonAPI Finish");
+		}
+
+		private void Test_Profiler_LoadAsset()
+		{
+			Debug.Log("Test_Profiler_LoadAsset Begin");
+			var now1 = System.DateTime.Now;
+			for (int i = 0; i < TEST_LEN; ++i)
+			{
+				var c = Resources.Load<TestCreateClass>("New Test Create Class");
+			}
+			var now2 = System.DateTime.Now;
+			var diff = now2 - now1;
+			Debug.Log("Cost ms: " + diff.TotalMilliseconds);
+			Debug.Log("Test_Profiler_LoadAsset Finish");
 		}
 	}
 }
