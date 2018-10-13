@@ -1,0 +1,21 @@
+level	comment	armadaLevel	prefab	costFund	costTime	fundCap	GameVersionBegin	GameVersionEnd	EffectRegionList
+1		1	Menu_Desc_ArmadaCreateCabin_Exchequer	2000	60	5000	1.4		cn,tw,kr,overseas,en
+2		1	Menu_Desc_ArmadaCreateCabin_Exchequer	2000	600	10000	1.4		cn,tw,kr,overseas,en
+3		2	Menu_Desc_ArmadaCreateCabin_Exchequer	3000	1800	17000	1.4		cn,tw,kr,overseas,en
+4		2	Menu_Desc_ArmadaCreateCabin_Exchequer	4500	1800	24000	1.4		cn,tw,kr,overseas,en
+5		2	Menu_Desc_ArmadaCreateCabin_Exchequer	6200	1800	31000	1.4		cn,tw,kr,overseas,en
+6		3	Menu_Desc_ArmadaCreateCabin_Exchequer	8100	3600	38000	1.4		cn,tw,kr,overseas,en
+7		3	Menu_Desc_ArmadaCreateCabin_Exchequer	10000	3600	45000	1.4		cn,tw,kr,overseas,en
+8		3	Menu_Desc_ArmadaCreateCabin_Exchequer	12000	3600	52000	1.4		cn,tw,kr,overseas,en
+9		3	Menu_Desc_ArmadaCreateCabin_Exchequer	15000	3600	59000	1.4		cn,tw,kr,overseas,en
+10		3	Menu_Desc_ArmadaCreateCabin_Exchequer	17000	3600	66000	1.4		cn,tw,kr,overseas,en
+11		4	Menu_Desc_ArmadaCreateCabin_Exchequer	19000	3600	73000	1.4		cn,tw,kr,overseas,en
+12		4	Menu_Desc_ArmadaCreateCabin_Exchequer	22000	3600	80000	1.4		cn,tw,kr,overseas,en
+13		4	Menu_Desc_ArmadaCreateCabin_Exchequer	25000	3600	87000	1.4		cn,tw,kr,overseas,en
+14		4	Menu_Desc_ArmadaCreateCabin_Exchequer	27000	3600	94000	1.4		cn,tw,kr,overseas,en
+15		4	Menu_Desc_ArmadaCreateCabin_Exchequer	30000	3600	101000	1.4		cn,tw,kr,overseas,en
+16		5	Menu_Desc_ArmadaCreateCabin_Exchequer	33000	3600	108000	1.4		cn,tw,kr,overseas,en
+17		5	Menu_Desc_ArmadaCreateCabin_Exchequer	36000	3600	115000	1.4		cn,tw,kr,overseas,en
+18		5	Menu_Desc_ArmadaCreateCabin_Exchequer	39000	3600	122000	1.4		cn,tw,kr,overseas,en
+19		5	Menu_Desc_ArmadaCreateCabin_Exchequer	42000	3600	129000	1.4		cn,tw,kr,overseas,en
+20		5	Menu_Desc_ArmadaCreateCabin_Exchequer	45000	3600	136000	1.4		cn,tw,kr,overseas,en
